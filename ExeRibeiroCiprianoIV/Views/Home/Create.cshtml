@@ -103,7 +103,21 @@
                 language: "tr",
                 todayHighlight: true,
             });
+            $('.date-picker').change(function () {
+                var inputData = new Date($(this).val());
+                var dataAtual = new Date();
+                var errorMessage = "Por favor, selecione uma data igual ou posterior à data atual.";
 
+                if (inputData < dataAtual) {
+                    $(this).addClass('input-validation-error');
+                    $(this).siblings('.text-danger').text(errorMessage);
+                    $(this).siblings('.text-danger').show();
+                } else {
+                    $(this).removeClass('input-validation-error');
+                    $(this).siblings('.text-danger').text('');
+                    $(this).siblings('.text-danger').hide();
+                }
+            });
 
         });
     </script>
