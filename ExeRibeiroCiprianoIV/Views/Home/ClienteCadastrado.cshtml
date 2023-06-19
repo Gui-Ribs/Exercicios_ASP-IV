@@ -1,0 +1,68 @@
+﻿@model ExeRibeiroCiprianoIV.Models.Cliente
+
+@{
+    ViewBag.Title = "Cliente";
+}
+
+<h2>Cliente Cadastrado</h2>
+
+<p>
+    @Html.ActionLink("Cadastrar novo Cliente", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdCli)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeCli)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CPF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Login)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Senha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConfirmSenha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataCadastro)
+        </th>
+        <th></th>
+    </tr>
+
+    <tr>
+        <td>
+            @Html.DisplayFor(model => model.IdCli)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.NomeCli)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.CPF)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.Login)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.Senha)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.ConfirmSenha)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.DataCadastro)
+        </td>
+    </tr>
+
+</table>
