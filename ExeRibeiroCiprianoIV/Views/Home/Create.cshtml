@@ -112,6 +112,7 @@
                     $(this).addClass('input-validation-error');
                     $(this).siblings('.text-danger').text(errorMessage);
                     $(this).siblings('.text-danger').show();
+                    $(this).val('');
                 } else {
                     $(this).removeClass('input-validation-error');
                     $(this).siblings('.text-danger').text('');
