@@ -73,7 +73,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.DataCadastro, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.DataCadastro, new { htmlAttributes = new { @class = "form-control date-picker", placeholder= "dd/mm/yyyy" } })
+                @Html.EditorFor(model => model.DataCadastro, new { htmlAttributes = new { @class = "form-control date-picker" } })
                 @Html.ValidationMessageFor(model => model.DataCadastro, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -96,7 +96,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
     <script type="text/javascript">
         $(function () {
-            $('.date-picker').datepicker({
+            $('.date-picke').datepicker({
                 changeMonth: true,
                 format: 'dd/mm/yyyy',
                 changeYear: true,
@@ -106,7 +106,7 @@
             $('.date-picker').change(function () {
                 var inputData = new Date($(this).val());
                 var dataAtual = new Date();
-                var errorMessage = "Por favor, selecione uma data igual ou posterior à data atual.";
+                var errorMessage = "A data deve ser igual ou superior a data de hoje.";
 
                 if (inputData < dataAtual) {
                     $(this).addClass('input-validation-error');

@@ -46,7 +46,8 @@ namespace ExeRibeiroCiprianoIV.Models
         public string ConfirmSenha { get; set; }
 
         [DisplayName("Data do cadastro")]
+        [DataType(DataType.Date)]
         [Required(ErrorMessage = "A data é obrigatória")]
-        public string DataCadastro { get; set; }
+        public DateTime DataCadastro { get; set; }
     }
 }
